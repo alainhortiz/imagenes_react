@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 
 function App() {
   const [linea1, setLinea1] = useState('');
@@ -11,6 +12,10 @@ function App() {
 
   const onChangeLinea2 = function(evento){
     setLinea2(evento.target.value);
+  }
+
+  const onChangeImagen = function(evento){
+    setImagen(evento.target.value);
   }
   return (
       <div className="App">
@@ -28,9 +33,9 @@ function App() {
         <button>Exportar</button>
 
         <div className='meme' id='meme'>
-          <span></span><br/>
-          <span></span>
-          <img src=''  alt={}/>
+          <span>{linea1}</span><br/>
+          <span>{linea2}</span>
+          <img src={'/img/' + imagen + '.jpg'} />
         </div>
       </div>
   );
