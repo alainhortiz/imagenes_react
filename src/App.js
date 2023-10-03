@@ -20,7 +20,7 @@ function App() {
         <div className='meme' id='meme'>
           <span></span><br/>
           <span></span>
-          <img src='' />
+          <img src=''  alt={}/>
         </div>
       </div>
   );
